@@ -20,9 +20,9 @@ def createOutPutDirectory():
     if not os.path.exists(outputPath):
         os.makedirs(outputPath)
     return outputPath
-        
-def writeJsonData(path, data):
-    with open(path + '/weeklyWinnings.json', 'w') as outfile:
+
+def writeJsonData(path, data, fileName):
+    with open(path + fileName, 'w') as outfile:
         json.dump(data, outfile, indent="\t")
         outfile.close()
 
